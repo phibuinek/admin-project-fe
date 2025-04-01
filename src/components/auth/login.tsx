@@ -4,11 +4,11 @@ import { ArrowLeftOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
 import { authenticate } from "@/utils/actions";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
+  const router = useRouter();
   const onFinish = async (values: any) => {
-    const router = useRouter();
     // console.log("check values: ", values);
     const { username, password } = values;
     // const data = await signIn("credentials", {

@@ -58,7 +58,7 @@ const AdminHeader = (props: any) => {
             }}
           >
             <Space>
-              Welcome Admin
+              Welcome {session?.user?.username ?? ""}
               <DownOutlined />
             </Space>
           </a>

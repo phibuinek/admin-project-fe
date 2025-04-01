@@ -4,7 +4,7 @@ import { signIn } from "@/auth";
 export async function authenticate(username: string, password: string) {
   try {
     const r = await signIn("credentials", {
-      email: username,
+      username: username,
       password: password,
       //   callbackUrl: "/",
       redirect: false,
@@ -18,7 +18,7 @@ export async function authenticate(username: string, password: string) {
       };
     } else if ((error as any).name === "InActiveAccountError") {
       return {
-        error: "(error as any).type",
+        error: (error as any).type,
         code: 2,
       };
     } else {
