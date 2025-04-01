@@ -4,7 +4,7 @@ const VerifyPage = ({ params }: { params: { id: string } }) => {
   const { id } = params;
   return (
     <>
-      <Verify />
+      <Verify id={id} />
     </>
   );
 };
